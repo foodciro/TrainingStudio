@@ -8,7 +8,6 @@
 }
 html, body{
     font-family: "Poppins", sans-serif;
-    background-color: #fff;
 }
 
 header{
@@ -248,6 +247,7 @@ li a.active {
     margin: 1.25rem auto;
     text-align: center;
     padding: 7.5rem 0;
+      margin-top: 10rem;
 }
 .content {
     display: flex;
@@ -514,13 +514,113 @@ li a.active {
   color: #ed563b;
   cursor: pointer;
 }
+#contact{
+  margin-top: 10rem;
+}
+.contact-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on large screens */
+  width: 98%;
+  margin: 0 auto;
+}
+
+.contact-container {
+  background: url('contact-bg.jpg') center/cover no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #a8a7a7;
+  /* border-radius: 5px; */
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Submit Button */
+.contact-form button {
+  background: #f04e30;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #d94328;
+  transform: translateY(-2px);
+}
+
+.footer {
+  color: #000; 
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #f04e30; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #d94328; 
+}
+
+
 
 @media (max-width: 768px) {
     header{
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 100; 
-        background-color: #f6f6f6;
+        background-color: #ffffff;
         color: #000;
     }
     i {
@@ -591,11 +691,17 @@ li a.active {
         height: 100vh;
         object-fit: cover;
     }
+
     .banner-content .btn{
       width: 80%;      
     }
     .banner-content .btn a{
         font-size: 1rem;
+    }
+    .banner-content h6{
+        font-size: 1rem;
+        padding-top: 12rem;
+       
     }
     .banner-content h2{
         font-size: 3.9rem;
@@ -640,6 +746,7 @@ li a.active {
       #begin-today {
         width: 98%;
         margin-top: auto;
+        margin-top: 38rem;
     }
 
     .content {
@@ -654,11 +761,17 @@ li a.active {
     .content p {
         font-size: 0.9rem;
     }
+    .content .btn{
+      width: 50%;
+    }
     #features{
       margin-top: -6rem;
     }
     .section-heading p{
       font-size: 0.8rem;
+    }
+    #OurClasses{
+      margin-top: -5rem;
     }
     .Our-Classes{
         display: grid;
@@ -724,6 +837,7 @@ li a.active {
         padding: 1.5rem 1rem;
         height: 160vh;
         margin-inline: auto;
+        margin-top: 30rem;
       }
       #schedule h2{
         font-size: 2rem;
@@ -744,6 +858,33 @@ li a.active {
       .cards{
         display: grid;
         grid-template-columns: 1fr;
+        width: 95%;
+        margin: auto;
       }
+      .contact-us{
+        margin-top: 85rem;
+        display: grid;
+        grid-template-columns: 1fr;
+      }  
+    .contact-container {
+        padding: 3rem auto; 
+    }
+  
+    .contact-form {
+        width: 85%;
+        max-width: 500px;
+    }
+    .contact-form form input, textarea{
+      font-size: 0.9rem;
+    }
+  
+    .form-group {
+        flex-direction: column;
+    }
+    .footer {
+      font-size: 0.8rem;
+      padding: 1rem 0;
+      margin-top: 30rem;
+  }
 }
 
